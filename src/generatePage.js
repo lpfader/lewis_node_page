@@ -14,5 +14,5 @@ const html = `
 </html>
 `;
 
-fs.writeFileSync("public/index.html", html);
-console.log("Generated public/index.html");
+fs.writeFileSync("docs/index.html", html);
+console.log("Generated docs/index.html");
