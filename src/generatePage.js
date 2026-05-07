@@ -5,9 +5,100 @@ const html = `
 <html>
 <head>
   <meta charset="UTF-8" />
+  <title>This page was created by Lewis using Node.js</title>
+  <link rel="stylesheet" href="prostyle_v2.css">
   <title>My Node Page</title>
 </head>
 <body>
+  <h1>Lewis’s Job Search Hub</h1>
+  <p>Hi Everyone! This page is your place for portals to all of the top GTA employers.</p>
+  <p>This began as a python project and I realized that others may want to use it as well. After a while I wanted to shift towards full stack development and determined that the concept behind my python script would be better served by a Node.js implementation. Most of the links will focus on web development, however you can use this as a launch pad for your project or job search</p>
+  <p><a href="https://lpfader.github.io/lewis_page/#/resume" target="_blank">Here's</a> my resume if you want to check it out or just contact me.</p>
+  <h2>Top Job Portals</h2>
+  <div class="container">
+    <ul>
+      <li><a href="https://careers.microsoft.com" target="_blank">Microsoft Careers</a></li>
+      <li><a href="https://jobs.apple.com" target="_blank">Apple Careers</a></li>
+      <li><a href="https://careers.google.com" target="_blank">Google Careers</a></li>
+      <li><a href="https://jobs.cisco.com" target="_blank">Cisco Careers</a></li>
+      <li><a href="https://www.ibm.com/careers" target="_blank">IBM Careers</a></li>
+    </ul>
+  </div>
+
+  <h2>Ontario Public Sector</h2>
+  <div class="container">
+    <ul>
+      <li><a href="https://www.gojobs.gov.on.ca" target="_blank">Ontario Public Service (OPS)</a></li>
+      <li><a href="https://jobs.toronto.ca" target="_blank">City of Toronto Jobs</a></li>
+      <li><a href="https://www.peelregion.ca/jobs" target="_blank">Region of Peel</a></li>
+      <li><a href="https://www.york.ca/careers" target="_blank">York Region Careers</a></li>
+    </ul>
+  </div>
+
+  <h2>List of Job Portals linked to my interests</h2>
+  <div class="container">
+<p>The below represent content tailored to my discriminating standards but will hold value to anyone demanding a more web-design focused approach.</p>
+  <ul>
+
+  <li><a href="https://job-boards.greenhouse.io/autotradercanada?gh_src=tstcpqh73us">Autotrader</a></li>
+
+  <li><a href="https://jobs.rbc.com/ca/en/search-results" target="_blank">RBC</a></li>
+    
+  <li><a href="https://careers.molsoncoors.com/us/en/search-results?m=3&location=Toronto%252CCanada">Molson</a></li>
+
+  <li><a href="https://jobs.molsoncoors.com/search/?q=&q2=&alertId=&title=&location=Toronto&department=&date=#searchresults">Also Molson I don't get it</a></li>
+
+  <li><a href="https://careers.rexall.ca/corporate-roles">Rexall Corporate</a></li>
+
+  <li><a href="https://jobs.scotiabank.com/search/?createNewAlert=false&q=html&locationsearch=">Scotiabank</a></li>
+
+  <li><a href="https://careers.walmart.ca/search-jobs" target="_blank">Walmart Canada Corporate</a></li>
+
+  <li><a href="https://jobs.bmo.com/ca/en/search-results?keywords=html" target="_blank">BMO</a></li>
+  
+  <li><a href="https://fa-exhh-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/StaplesCanada/jobs?keyword=html&mode=location">Staples Corporate</a></li>
+
+  <li><a href="https://apply.careers.microsoft.com/careers?start=0&location=Canada%2C+Ontario%2C+Toronto&pid=1970393556757950&sort_by=distance&filter_distance=160&filter_include_remote=1" target="_blank">Microsoft Careers (Toronto Filtered)</a></li>
+
+  <li><a href="https://careers.cisco.com/global/en/search-results" target="_blank">Cisco Careers</a></li>
+
+  <li><a href="https://intel.wd1.myworkdayjobs.com/External?locations=1e4a4eb3adf1019f4237e975bf81b3ce" target="_blank">Intel Careers</a></li>
+
+  <li><a href="https://careers.amd.com/careers-home/jobs?page=1&country=Canada" target="_blank">AMD Careers</a></li>
+
+  <li><a href="https://www.lyft.com/careers#openings?location=toronto%252C%2520canada" target="_blank">Lyft Careers (Toronto)</a></li>
+
+  <li><a href="https://jobs.rogers.com/go/Digital-&-Technology/9547900/" target="_blank">Rogers Digital & Technology Jobs</a></li>
+
+  <li><a href="https://jobs.bell.ca/ca/en/search-results?keywords=toronto" target="_blank">Bell Careers (Toronto)</a></li>
+
+  <li><a href="https://careers.telus.com/search/?createNewAlert=false&q=&locationsearch=toronto&optionsFacetsDD_department=&optionsFacetsDD_customfield5=&optionsFacetsDD_customfield1=&optionsFacetsDD_customfield2=" target="_blank">TELUS Careers (Toronto)</a></li>
+
+  <li><a href="https://www.gojobs.gov.on.ca" target="_blank">Ontario Public Service (OPS)</a></li>
+
+  <li><a href="https://jobs.toronto.ca/jobsatcity/search/" target="_blank">City of Toronto Jobs</a></li>
+
+  <li><a href="https://jobs.mississauga.ca/search/?createNewAlert=false&q=" target="_blank">City of Mississauga Jobs</a></li>
+
+  <li><a href="https://jobs.utoronto.ca/search/?q=html&utm_source=CSSearchWidget&startrow=1" target="_blank">University of Toronto Jobs</a></li>
+
+  <li><a href="https://careers.torontomu.ca/psc/hrcgprd/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U" target="_blank">Toronto Metropolitan University Jobs</a></li>
+
+  <li><a href="https://jobs-ca.technomedia.com/yorkuniversity/" target="_blank">York University Jobs</a></li>
+
+  <li><a href="https://career17.sapsf.com/career?company=TTCPRODUCTION&career%5fns=job%5flisting%5fsummary&navBarLevel=JOB%5f_SEARCH&_s.crb=YnvsaxvQwoY%2fHzy%2f%2br38Hcyuejj39CUI7cwDcPPXc5Y%3d" target="_blank">Toronto Transit Commission (TTC) Jobs</a></li>
+
+  <li><a href="https://careers.deloitte.ca/search/?createNewAlert=false&q=html&locationsearch=&optionsFacetsDD_customfield3=&optionsFacetsDD_shifttype=" target="_blank">Deloitte Canada Careers</a></li>
+
+  <li><a href="https://www.accenture.com/ca-en/careers/jobsearch?jk=html&sb=0&vw=0&is_rj=0&pg=1" target="_blank">Accenture Canada Careers</a></li>
+
+  <li><a href="https://careers.publicissapient.com/job-search?q=&location_q=Canada" target="_blank">Publicis Sapient Canada Careers</a></li>
+
+  <li><a href="https://ch.wd3.myworkdayjobs.com/Honda_Canada" target="_blank">Honda Canada Careers</a></li>
+
+  <li><a href="https://careers.smartrecruiters.com/IndigoBooksMusic/home-office" target="_blank">Indigo Corporate Careers</a></li>
+</ul>
+    </div>
   <h1>Welcome to my Node.js page</h1>
   <p>This page was generated using Node.js.</p>
 </body>
