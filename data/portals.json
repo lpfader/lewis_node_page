@@ -6,66 +6,94 @@
       "intro": "",
       "portals": [
         { "company": "Ontario Public Service (OPS)", "url": "https://www.gojobs.gov.on.ca" },
-        { "company": "City of Toronto Jobs", "url": "https://jobs.toronto.ca" },
+        { "company": "City of Toronto Jobs", "url": "https://jobs.toronto.ca/jobsatcity/search/" },
+        { "company": "City of Mississauga Jobs", "url": "https://jobs.mississauga.ca/search/?createNewAlert=false&q=" },
         { "company": "Region of Peel", "url": "https://www.peelregion.ca/jobs" },
-        { "company": "York Region Careers", "url": "https://www.york.ca/careers" }
+        { "company": "York Region Careers", "url": "https://www.york.ca/careers" },
+        { "company": "Toronto Transit Commission (TTC) Jobs", "url": "https://career17.sapsf.com/career?company=TTCPRODUCTION&career%5fns=job%5flisting%5fsummary&navBarLevel=JOB%5f_SEARCH&_s.crb=YnvsaxvQwoY%2fHzy%2f%2br38Hcyuejj39CUI7cwDcPPXc5Y%3d" },
+        { "company": "OLG", "url": "https://olg.wd3.myworkdayjobs.com/Careers?locations=d077250173dc01ccc4dda63193010767" },
+        { "company": "Alcohol & Gaming Commission Ontario", "url": "https://jobs.dayforcehcm.com/agco/CANDIDATEPORTAL?searchText=web" }
       ]
     },
     {
-      "title": "List of Job Portals linked to my interests",
-      "intro": "The below represent content tailored to my discriminating standards but will hold value to anyone demanding a more web-design focused approach.",
+      "title": "Tech & Telecom",
+      "intro": "The sections below are tailored to my own discriminating standards, but they will hold value for anyone who wants a more web-design focused approach.",
       "portals": [
-        { "company": "Microsoft Careers", "url": "https://careers.microsoft.com" },
+        { "company": "Microsoft Careers (Toronto)", "url": "https://apply.careers.microsoft.com/careers?start=0&location=Canada%2C+Ontario%2C+Toronto&pid=1970393556757950&sort_by=distance&filter_distance=160&filter_include_remote=1" },
         { "company": "Apple Careers", "url": "https://jobs.apple.com" },
         { "company": "Google Careers", "url": "https://careers.google.com" },
-        { "company": "Cisco Careers", "url": "https://jobs.cisco.com" },
-        { "company": "IBM Careers", "url": "https://www.ibm.com/careers" },
-        { "company": "Autotrader", "url": "https://job-boards.greenhouse.io/autotradercanada?gh_src=tstcpqh73us" },
-        { "company": "RBC", "url": "https://jobs.rbc.com/ca/en/search-results" },
-        { "company": "Molson", "url": "https://careers.molsoncoors.com/us/en/search-results?m=3&location=Toronto%252CCanada" },
-        { "company": "Molson (second board)", "url": "https://jobs.molsoncoors.com/search/?q=&q2=&alertId=&title=&location=Toronto&department=&date=#searchresults" },
-        { "company": "Rexall Corporate", "url": "https://careers.rexall.ca/corporate-roles" },
-        { "company": "Scotiabank", "url": "https://jobs.scotiabank.com/search/?createNewAlert=false&q=html&locationsearch=" },
-        { "company": "Walmart Canada Corporate", "url": "https://careers.walmart.ca/search-jobs" },
-        { "company": "BMO", "url": "https://jobs.bmo.com/ca/en/search-results?keywords=html" },
-        { "company": "Staples Corporate", "url": "https://fa-exhh-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/StaplesCanada/jobs?keyword=html&mode=location" },
-        { "company": "Microsoft Careers (Toronto Filtered)", "url": "https://apply.careers.microsoft.com/careers?start=0&location=Canada%2C+Ontario%2C+Toronto&pid=1970393556757950&sort_by=distance&filter_distance=160&filter_include_remote=1" },
         { "company": "Cisco Careers", "url": "https://careers.cisco.com/global/en/search-results" },
+        { "company": "IBM Careers", "url": "https://www.ibm.com/careers" },
         { "company": "Intel Careers", "url": "https://intel.wd1.myworkdayjobs.com/External?locations=1e4a4eb3adf1019f4237e975bf81b3ce" },
         { "company": "AMD Careers", "url": "https://careers.amd.com/careers-home/jobs?page=1&country=Canada" },
+        { "company": "ADP Canada", "url": "https://jobs.adp.com/en/jobs/?search=html&ref=&mylocation=Toronto%2C+ON%2C+Canada&pagesize=20&lat=43.6548253&lng=-79.388447#results" },
+        { "company": "Autotrader", "url": "https://job-boards.greenhouse.io/autotradercanada?gh_src=tstcpqh73us" },
         { "company": "Lyft Careers (Toronto)", "url": "https://www.lyft.com/careers#openings?location=toronto%252C%2520canada" },
         { "company": "Rogers Digital & Technology Jobs", "url": "https://jobs.rogers.com/go/Digital-&-Technology/9547900/" },
         { "company": "Bell Careers (Toronto)", "url": "https://jobs.bell.ca/ca/en/search-results?keywords=toronto" },
-        { "company": "TELUS Careers (Toronto)", "url": "https://careers.telus.com/search/?createNewAlert=false&q=&locationsearch=toronto&optionsFacetsDD_department=&optionsFacetsDD_customfield5=&optionsFacetsDD_customfield1=&optionsFacetsDD_customfield2=" },
-        { "company": "OLG", "url": "https://olg.wd3.myworkdayjobs.com/Careers?locations=d077250173dc01ccc4dda63193010767" },
-        { "company": "City of Mississauga Jobs", "url": "https://jobs.mississauga.ca/search/?createNewAlert=false&q=" },
-        { "company": "University of Toronto Jobs", "url": "https://jobs.utoronto.ca/search/?q=html&utm_source=CSSearchWidget&startrow=1" },
-        { "company": "Toronto Metropolitan University Jobs", "url": "https://careers.torontomu.ca/psc/hrcgprd/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U" },
-        { "company": "York University Jobs", "url": "https://jobs-ca.technomedia.com/yorkuniversity/" },
-        { "company": "Toronto Transit Commission (TTC) Jobs", "url": "https://career17.sapsf.com/career?company=TTCPRODUCTION&career%5fns=job%5flisting%5fsummary&navBarLevel=JOB%5f_SEARCH&_s.crb=YnvsaxvQwoY%2fHzy%2f%2br38Hcyuejj39CUI7cwDcPPXc5Y%3d" },
+        { "company": "TELUS Careers (Toronto)", "url": "https://careers.telus.com/search/?createNewAlert=false&q=&locationsearch=toronto&optionsFacetsDD_department=&optionsFacetsDD_customfield5=&optionsFacetsDD_customfield1=&optionsFacetsDD_customfield2=" }
+      ]
+    },
+    {
+      "title": "Banking, Finance & Insurance",
+      "intro": "",
+      "portals": [
+        { "company": "RBC", "url": "https://jobs.rbc.com/ca/en/search-results" },
+        { "company": "BMO", "url": "https://jobs.bmo.com/ca/en/search-results?keywords=html" },
+        { "company": "Scotiabank", "url": "https://jobs.scotiabank.com/search/?createNewAlert=false&q=html&locationsearch=" },
+        { "company": "AMEX", "url": "https://careers.americanexpress.com/en/sites/CX_1/jobs?location=Toronto%2C+ON%2C+Canada&locationId=100000005979118&locationLevel=city&mode=location&radius=25&radiusUnit=MI" },
+        { "company": "Capital One", "url": "https://www.capitalonecareers.ca/search-jobs/Toronto%2C%20Ontario/234/4/6251999-6093943-6167865/43x70011/-79x4163/50/2" },
+        { "company": "Fidelity", "url": "https://fil.wd3.myworkdayjobs.com/en-US/fidelitycanada/details/Digital-Experience-Specialist_J66998?q=html" },
+        { "company": "Manulife", "url": "https://careers.manulife.com/global/en/search-results?keywords=html&p=ChIJpTvG15DL1IkRd8S0KlBVNTI&location=Toronto%2C%20ON%2C%20Canada" },
+        { "company": "Equifax", "url": "https://careers.equifax.com/en/locations/toronto/" },
+        { "company": "OTPP", "url": "https://otppb.wd3.myworkdayjobs.com/en-US/OntarioTeachers_Careers?q=web" },
+        { "company": "HOOPP", "url": "https://hoopp.wd10.myworkdayjobs.com/HOOPP?q=html" }
+      ]
+    },
+    {
+      "title": "Consulting & Agencies",
+      "intro": "",
+      "portals": [
         { "company": "Deloitte Canada Careers", "url": "https://careers.deloitte.ca/search/?createNewAlert=false&q=html&locationsearch=&optionsFacetsDD_customfield3=&optionsFacetsDD_shifttype=" },
         { "company": "Accenture Canada Careers", "url": "https://www.accenture.com/ca-en/careers/jobsearch?jk=html&sb=0&vw=0&is_rj=0&pg=1" },
-        { "company": "Publicis Sapient Canada Careers", "url": "https://careers.publicissapient.com/job-search?q=&location_q=Canada" },
-        { "company": "Honda Canada Careers", "url": "https://ch.wd3.myworkdayjobs.com/Honda_Canada" },
-        { "company": "Mars Canada", "url": "https://careers.mars.com/global/en/search-results" },
-        { "company": "OTPP", "url": "https://otppb.wd3.myworkdayjobs.com/en-US/OntarioTeachers_Careers?q=web" },
-        { "company": "Aecon", "url": "https://jobs.aecon.com/go/View-All-Aecon-Jobs/2609917/?q=&q2=&alertId=&locationsearch=&title=&department=&location=Toronto&date=#searchresults" },
+        { "company": "Publicis Sapient Canada Careers", "url": "https://careers.publicissapient.com/job-search?q=&location_q=Canada" }
+      ]
+    },
+    {
+      "title": "Retail & Consumer Goods",
+      "intro": "",
+      "portals": [
+        { "company": "Walmart Canada Corporate", "url": "https://careers.walmart.ca/search-jobs" },
         { "company": "Home Depot", "url": "https://careers.homedepot.ca/career-areas/corporate-opportunities" },
-        { "company": "CAASCO", "url": "https://jobs.caaclubgroup.ca/search/" },
-        { "company": "ADP Canada", "url": "https://jobs.adp.com/en/jobs/?search=html&ref=&mylocation=Toronto%2C+ON%2C+Canada&pagesize=20&lat=43.6548253&lng=-79.388447#results" },
-        { "company": "Alcohol & Gaming Commission Ontario", "url": "https://jobs.dayforcehcm.com/agco/CANDIDATEPORTAL?searchText=web" },
-        { "company": "AMEX", "url": "https://careers.americanexpress.com/en/sites/CX_1/jobs?location=Toronto%2C+ON%2C+Canada&locationId=100000005979118&locationLevel=city&mode=location&radius=25&radiusUnit=MI" },
-        { "company": "Eli Lilly", "url": "https://careers.lilly.com/us/en/search-results?keywords=web" },
-        { "company": "Fidelity", "url": "https://fil.wd3.myworkdayjobs.com/en-US/fidelitycanada/details/Digital-Experience-Specialist_J66998?q=html" },
-        { "company": "GlaxoSmithKline", "url": "https://jobs.gsk.com/en-ca/jobs?keywords=web&location=toronto&lang=en-ca&sortBy=relevance&page=1&stretch=10&stretchUnit=KILOMETERS" },
-        { "company": "HOOPP", "url": "https://hoopp.wd10.myworkdayjobs.com/HOOPP?q=html" },
-        { "company": "Manulife", "url": "https://careers.manulife.com/global/en/search-results?keywords=html&p=ChIJpTvG15DL1IkRd8S0KlBVNTI&location=Toronto%2C%20ON%2C%20Canada" },
-        { "company": "Cadillac Fairview", "url": "https://recruiting.ultipro.ca/cad5000cfcl/JobBoard/89aff150-d66c-444e-b2df-be190dad9e87/?q=&o=distance&w=Toronto%2C+ON%2C+CAN&wc=-79.383907%2C43.653524&we=-79.89990700000001%2C44.169523999999996%7C-78.867907%2C43.137524&wpst=2" },
-        { "company": "Capital One", "url": "https://www.capitalonecareers.ca/search-jobs/Toronto%2C%20Ontario/234/4/6251999-6093943-6167865/43x70011/-79x4163/50/2" },
+        { "company": "Staples Corporate", "url": "https://fa-exhh-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/StaplesCanada/jobs?keyword=html&mode=location" },
+        { "company": "Rexall Corporate", "url": "https://careers.rexall.ca/corporate-roles" },
+        { "company": "Mars Canada", "url": "https://careers.mars.com/global/en/search-results" },
         { "company": "Conagra Brands", "url": "https://careers.conagrabrands.com/us/en/search-results?keywords=&p=65a8e27d8879283831b664bd8b7f0ad4&location=Toronto,%20Ontario,%20Canada" },
-        { "company": "Equifax", "url": "https://careers.equifax.com/en/locations/toronto/" },
+        { "company": "Labatt (Ab InBev)", "url": "https://wd1.myworkdaysite.com/recruiting/abinbev/CAN?locations=9a7a7b779da90101b509f150a55f0000&locations=9a7a7b779da90101b509f01adb370000" },
+        { "company": "Molson", "url": "https://careers.molsoncoors.com/us/en/search-results?m=3&location=Toronto%252CCanada" },
+        { "company": "Molson (second board)", "url": "https://jobs.molsoncoors.com/search/?q=&q2=&alertId=&title=&location=Toronto&department=&date=#searchresults" }
+      ]
+    },
+    {
+      "title": "Healthcare, Industrial & Other",
+      "intro": "",
+      "portals": [
+        { "company": "Eli Lilly", "url": "https://careers.lilly.com/us/en/search-results?keywords=web" },
+        { "company": "GlaxoSmithKline", "url": "https://jobs.gsk.com/en-ca/jobs?keywords=web&location=toronto&lang=en-ca&sortBy=relevance&page=1&stretch=10&stretchUnit=KILOMETERS" },
+        { "company": "Honda Canada Careers", "url": "https://ch.wd3.myworkdayjobs.com/Honda_Canada" },
+        { "company": "Aecon", "url": "https://jobs.aecon.com/go/View-All-Aecon-Jobs/2609917/?q=&q2=&alertId=&locationsearch=&title=&department=&location=Toronto&date=#searchresults" },
         { "company": "IPEX", "url": "https://aliaxis.wd3.myworkdayjobs.com/IPEX?locations=eda0eb93169c01bc21fff17f921a5c1a&locations=7ed37b00bf491001ec7e1135c6720000" },
-        { "company": "Labatt (Ab InBev)", "url": "https://wd1.myworkdaysite.com/recruiting/abinbev/CAN?locations=9a7a7b779da90101b509f150a55f0000&locations=9a7a7b779da90101b509f01adb370000" }
+        { "company": "Cadillac Fairview", "url": "https://recruiting.ultipro.ca/cad5000cfcl/JobBoard/89aff150-d66c-444e-b2df-be190dad9e87/?q=&o=distance&w=Toronto%2C+ON%2C+CAN&wc=-79.383907%2C43.653524&we=-79.89990700000001%2C44.169523999999996%7C-78.867907%2C43.137524&wpst=2" },
+        { "company": "CAASCO", "url": "https://jobs.caaclubgroup.ca/search/" }
+      ]
+    },
+    {
+      "title": "Universities",
+      "intro": "",
+      "portals": [
+        { "company": "University of Toronto Jobs", "url": "https://jobs.utoronto.ca/search/?q=html&utm_source=CSSearchWidget&startrow=1" },
+        { "company": "Toronto Metropolitan University Jobs", "url": "https://careers.torontomu.ca/psc/hrcgprd/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U" },
+        { "company": "York University Jobs", "url": "https://jobs-ca.technomedia.com/yorkuniversity/" }
       ]
     }
   ]
