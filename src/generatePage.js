@@ -1,109 +1,200 @@
-import fs from "fs";
+#!/usr/bin/env node
+/**
+ * Generates docs/index.html from data/portals.json.
+ *
+ * Pipeline:  data/portals.json  ->  docs/index.html  ->  GitHub Pages
+ *
+ *   npm run build     regenerate docs/index.html
+ *   npm run check     fail if docs/index.html is out of date (CI guard)
+ *
+ * docs/index.html is OUTPUT. Editing it by hand is how this project drifted
+ * once already: the generator kept a 39-link copy while the shipped page had
+ * 58 links, so a single `npm run build` would have deleted 21 job portals.
+ * `npm run check` exists to make that impossible to do silently.
+ */
 
-const html = `
-<!DOCTYPE html>
-<html>
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const here = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(here, "..");
+const DATA_FILE = path.join(ROOT, "data", "portals.json");
+const OUT_FILE = path.join(ROOT, "docs", "index.html");
+
+// Page copy. Directory entries live in portals.json; prose lives here.
+const PAGE = {
+  title: "Lewis\u2019s Job Search Hub",
+  heading: "Lewis\u2019s Job Search Hub",
+  intro: [
+    "Hi Everyone! This page is your place for portals to all of the top GTA employers.",
+    "This began as a python project and I realized that others may want to use it as well. After a while I wanted to shift towards full stack development and determined that the concept behind my python script would be better served by a Node.js implementation. Most of the links will focus on web development, however you can use this as a launch pad for your project or job search",
+  ],
+  // Not directory listings, so they stay with the prose rather than the JSON.
+  proseLinks: [
+    {
+      href: "https://lpfader.github.io/lewis_page/#/resume",
+      text: "Here's",
+      after: " my resume if you want to check it out or just contact me.",
+    },
+    {
+      href: "https://lpfader.github.io/lewis-coffee/",
+      text: "Here it is in the style of Global Village Coffeehouse",
+      after: "",
+    },
+  ],
+};
+
+// Text nodes only need & < > escaped. Attribute values also need quotes.
+const TEXT_ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;" };
+const ATTR_ESCAPES = { ...TEXT_ESCAPES, '"': "&quot;" };
+const escapeHtml = (value) => String(value).replace(/[&<>]/g, (c) => TEXT_ESCAPES[c]);
+const escapeAttr = (value) => String(value).replace(/[&<>"]/g, (c) => ATTR_ESCAPES[c]);
+
+function load() {
+  let raw;
+  try {
+    raw = fs.readFileSync(DATA_FILE, "utf8");
+  } catch {
+    fail(`Cannot read ${path.relative(ROOT, DATA_FILE)}. Run this from the repository.`);
+  }
+
+  let data;
+  try {
+    data = JSON.parse(raw);
+  } catch (err) {
+    fail(`${path.relative(ROOT, DATA_FILE)} is not valid JSON: ${err.message}`);
+  }
+
+  const sections = data?.sections;
+  if (!Array.isArray(sections) || sections.length === 0) {
+    fail("portals.json has no sections.");
+  }
+  return sections;
+}
+
+function fail(message) {
+  console.error(`\n  ${message}\n`);
+  process.exit(1);
+}
+
+/** Catches the mistakes that are easy to make by hand: typos, dupes, blanks. */
+function validate(sections) {
+  const problems = [];
+  const seenUrls = new Map();
+
+  sections.forEach((section, si) => {
+    const where = `section ${si + 1}`;
+    if (!section.title) problems.push(`${where}: missing "title"`);
+
+    const portals = section.portals;
+    if (!Array.isArray(portals) || portals.length === 0) {
+      problems.push(`${where} ("${section.title}"): no portals`);
+      return;
+    }
+
+    portals.forEach((portal, pi) => {
+      const at = `"${section.title}" item ${pi + 1}`;
+
+      if (!portal.company) problems.push(`${at}: missing "company"`);
+      if (!portal.url) {
+        problems.push(`${at}: missing "url"`);
+        return;
+      }
+      if (!/^https?:\/\//i.test(portal.url)) {
+        problems.push(`${at}: url must start with http:// or https:// — got "${portal.url}"`);
+      }
+      if (seenUrls.has(portal.url)) {
+        problems.push(`${at}: duplicate url, already listed as ${seenUrls.get(portal.url)}`);
+      } else {
+        seenUrls.set(portal.url, at);
+      }
+    });
+  });
+
+  if (problems.length > 0) {
+    fail(`portals.json has ${problems.length} problem(s):\n   - ${problems.join("\n   - ")}`);
+  }
+
+  return seenUrls.size;
+}
+
+function renderPortal(portal) {
+  const url = escapeAttr(portal.url);
+  const name = escapeHtml(portal.company);
+  return `      <li><a href="${url}" target="_blank" rel="noopener noreferrer">${name}</a></li>`;
+}
+
+function renderSection(section) {
+  const intro = section.intro ? `\n    <p>${escapeHtml(section.intro)}</p>` : "";
+  const items = section.portals.map(renderPortal).join("\n");
+
+  return `
+  <h2>${escapeHtml(section.title)}</h2>
+  <div class="container">${intro}
+    <ul>
+${items}
+    </ul>
+  </div>
+`;
+}
+
+function render(sections) {
+  const intro = PAGE.intro.map((p) => `  <p>${escapeHtml(p)}</p>`).join("\n");
+  const prose = PAGE.proseLinks
+    .map(
+      ({ href, text, after }) =>
+        `  <p><a href="${escapeAttr(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(text)}</a>${escapeHtml(after)}</p>`
+    )
+    .join("\n");
+
+  return `<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>This page was created by Lewis using Node.js</title>
-  <link rel="stylesheet" href="prostyle_v2.css">
-  <title>My Node Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${escapeHtml(PAGE.title)}</title>
+  <link rel="stylesheet" href="prostyle_v2.css" />
 </head>
 <body>
-  <h1>Lewis’s Job Search Hub</h1>
-  <p>Hi Everyone! This page is your place for portals to all of the top GTA employers.</p>
-  <p>This began as a python project and I realized that others may want to use it as well. After a while I wanted to shift towards full stack development and determined that the concept behind my python script would be better served by a Node.js implementation. Most of the links will focus on web development, however you can use this as a launch pad for your project or job search</p>
-  <p><a href="https://lpfader.github.io/lewis_page/#/resume" target="_blank">Here's</a> my resume if you want to check it out or just contact me.</p>
-  <h2>Top Job Portals</h2>
-  <div class="container">
-    <ul>
-      <li><a href="https://careers.microsoft.com" target="_blank">Microsoft Careers</a></li>
-      <li><a href="https://jobs.apple.com" target="_blank">Apple Careers</a></li>
-      <li><a href="https://careers.google.com" target="_blank">Google Careers</a></li>
-      <li><a href="https://jobs.cisco.com" target="_blank">Cisco Careers</a></li>
-      <li><a href="https://www.ibm.com/careers" target="_blank">IBM Careers</a></li>
-    </ul>
-  </div>
-
-  <h2>Ontario Public Sector</h2>
-  <div class="container">
-    <ul>
-      <li><a href="https://www.gojobs.gov.on.ca" target="_blank">Ontario Public Service (OPS)</a></li>
-      <li><a href="https://jobs.toronto.ca" target="_blank">City of Toronto Jobs</a></li>
-      <li><a href="https://www.peelregion.ca/jobs" target="_blank">Region of Peel</a></li>
-      <li><a href="https://www.york.ca/careers" target="_blank">York Region Careers</a></li>
-    </ul>
-  </div>
-
-  <h2>List of Job Portals linked to my interests</h2>
-  <div class="container">
-<p>The below represent content tailored to my discriminating standards but will hold value to anyone demanding a more web-design focused approach.</p>
-  <ul>
-
-  <li><a href="https://job-boards.greenhouse.io/autotradercanada?gh_src=tstcpqh73us">Autotrader</a></li>
-
-  <li><a href="https://jobs.rbc.com/ca/en/search-results" target="_blank">RBC</a></li>
-    
-  <li><a href="https://careers.molsoncoors.com/us/en/search-results?m=3&location=Toronto%252CCanada">Molson</a></li>
-
-  <li><a href="https://jobs.molsoncoors.com/search/?q=&q2=&alertId=&title=&location=Toronto&department=&date=#searchresults">Also Molson I don't get it</a></li>
-
-  <li><a href="https://careers.rexall.ca/corporate-roles">Rexall Corporate</a></li>
-
-  <li><a href="https://jobs.scotiabank.com/search/?createNewAlert=false&q=html&locationsearch=">Scotiabank</a></li>
-
-  <li><a href="https://careers.walmart.ca/search-jobs" target="_blank">Walmart Canada Corporate</a></li>
-
-  <li><a href="https://jobs.bmo.com/ca/en/search-results?keywords=html" target="_blank">BMO</a></li>
-  
-  <li><a href="https://fa-exhh-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/StaplesCanada/jobs?keyword=html&mode=location">Staples Corporate</a></li>
-
-  <li><a href="https://apply.careers.microsoft.com/careers?start=0&location=Canada%2C+Ontario%2C+Toronto&pid=1970393556757950&sort_by=distance&filter_distance=160&filter_include_remote=1" target="_blank">Microsoft Careers (Toronto Filtered)</a></li>
-
-  <li><a href="https://careers.cisco.com/global/en/search-results" target="_blank">Cisco Careers</a></li>
-
-  <li><a href="https://intel.wd1.myworkdayjobs.com/External?locations=1e4a4eb3adf1019f4237e975bf81b3ce" target="_blank">Intel Careers</a></li>
-
-  <li><a href="https://careers.amd.com/careers-home/jobs?page=1&country=Canada" target="_blank">AMD Careers</a></li>
-
-  <li><a href="https://www.lyft.com/careers#openings?location=toronto%252C%2520canada" target="_blank">Lyft Careers (Toronto)</a></li>
-
-  <li><a href="https://jobs.rogers.com/go/Digital-&-Technology/9547900/" target="_blank">Rogers Digital & Technology Jobs</a></li>
-
-  <li><a href="https://jobs.bell.ca/ca/en/search-results?keywords=toronto" target="_blank">Bell Careers (Toronto)</a></li>
-
-  <li><a href="https://careers.telus.com/search/?createNewAlert=false&q=&locationsearch=toronto&optionsFacetsDD_department=&optionsFacetsDD_customfield5=&optionsFacetsDD_customfield1=&optionsFacetsDD_customfield2=" target="_blank">TELUS Careers (Toronto)</a></li>
-
-  <li><a href="https://www.gojobs.gov.on.ca" target="_blank">Ontario Public Service (OPS)</a></li>
-
-  <li><a href="https://jobs.toronto.ca/jobsatcity/search/" target="_blank">City of Toronto Jobs</a></li>
-
-  <li><a href="https://jobs.mississauga.ca/search/?createNewAlert=false&q=" target="_blank">City of Mississauga Jobs</a></li>
-
-  <li><a href="https://jobs.utoronto.ca/search/?q=html&utm_source=CSSearchWidget&startrow=1" target="_blank">University of Toronto Jobs</a></li>
-
-  <li><a href="https://careers.torontomu.ca/psc/hrcgprd/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U" target="_blank">Toronto Metropolitan University Jobs</a></li>
-
-  <li><a href="https://jobs-ca.technomedia.com/yorkuniversity/" target="_blank">York University Jobs</a></li>
-
-  <li><a href="https://career17.sapsf.com/career?company=TTCPRODUCTION&career%5fns=job%5flisting%5fsummary&navBarLevel=JOB%5f_SEARCH&_s.crb=YnvsaxvQwoY%2fHzy%2f%2br38Hcyuejj39CUI7cwDcPPXc5Y%3d" target="_blank">Toronto Transit Commission (TTC) Jobs</a></li>
-
-  <li><a href="https://careers.deloitte.ca/search/?createNewAlert=false&q=html&locationsearch=&optionsFacetsDD_customfield3=&optionsFacetsDD_shifttype=" target="_blank">Deloitte Canada Careers</a></li>
-
-  <li><a href="https://www.accenture.com/ca-en/careers/jobsearch?jk=html&sb=0&vw=0&is_rj=0&pg=1" target="_blank">Accenture Canada Careers</a></li>
-
-  <li><a href="https://careers.publicissapient.com/job-search?q=&location_q=Canada" target="_blank">Publicis Sapient Canada Careers</a></li>
-
-  <li><a href="https://ch.wd3.myworkdayjobs.com/Honda_Canada" target="_blank">Honda Canada Careers</a></li>
-
-  <li><a href="https://careers.smartrecruiters.com/IndigoBooksMusic/home-office" target="_blank">Indigo Corporate Careers</a></li>
-</ul>
-    </div>
-  <h1>Welcome to my Node.js page</h1>
-  <p>This page was generated using Node.js.</p>
-</body>
+  <h1>${escapeHtml(PAGE.heading)}</h1>
+${intro}
+${prose}
+${sections.map(renderSection).join("")}</body>
 </html>
 `;
+}
 
-fs.writeFileSync("docs/index.html", html);
-console.log("Generated docs/index.html");
+// ---------------------------------------------------------------------------
+
+const sections = load();
+const portalCount = validate(sections);
+const html = render(sections);
+
+const checkOnly = process.argv.includes("--check");
+
+if (checkOnly) {
+  let existing = "";
+  try {
+    existing = fs.readFileSync(OUT_FILE, "utf8");
+  } catch {
+    fail(`${path.relative(ROOT, OUT_FILE)} is missing. Run: npm run build`);
+  }
+  if (existing !== html) {
+    fail(
+      `${path.relative(ROOT, OUT_FILE)} does not match data/portals.json.\n` +
+        "   Either it was edited by hand, or the JSON changed without a rebuild.\n" +
+        "   Run: npm run build"
+    );
+  }
+  console.log(`docs/index.html is up to date (${sections.length} sections, ${portalCount} portals).`);
+  process.exit(0);
+}
+
+fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
+fs.writeFileSync(OUT_FILE, html);
+
+const kb = (Buffer.byteLength(html) / 1024).toFixed(1);
+console.log(
+  `Generated ${path.relative(ROOT, OUT_FILE)} — ${sections.length} sections, ${portalCount} portals, ${kb} kB.`
+);

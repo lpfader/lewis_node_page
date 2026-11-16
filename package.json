@@ -1,11 +1,12 @@
 {
   "name": "lewis_node_page",
   "version": "1.0.0",
-  "description": "",
+  "description": "A curated directory of GTA job portals, generated from data/portals.json.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node src/generatePage.js"
+    "build": "node src/generatePage.js",
+    "check": "node src/generatePage.js --check",
+    "test": "node src/generatePage.js --check"
   },
   "keywords": [],
   "author": "",
