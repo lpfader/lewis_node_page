@@ -12,7 +12,17 @@
         { "company": "York Region Careers", "url": "https://www.york.ca/careers" },
         { "company": "Toronto Transit Commission (TTC) Jobs", "url": "https://career17.sapsf.com/career?company=TTCPRODUCTION&career%5fns=job%5flisting%5fsummary&navBarLevel=JOB%5f_SEARCH&_s.crb=YnvsaxvQwoY%2fHzy%2f%2br38Hcyuejj39CUI7cwDcPPXc5Y%3d" },
         { "company": "OLG", "url": "https://olg.wd3.myworkdayjobs.com/Careers?locations=d077250173dc01ccc4dda63193010767" },
-        { "company": "Alcohol & Gaming Commission Ontario", "url": "https://jobs.dayforcehcm.com/agco/CANDIDATEPORTAL?searchText=web" }
+        { "company": "Alcohol & Gaming Commission Ontario", "url": "https://jobs.dayforcehcm.com/agco/CANDIDATEPORTAL?searchText=web" },
+        { "company": "Metrolinx", "url": "https://www.metrolinx.com/en/about-us/careers" },
+        { "company": "Toronto Hydro", "url": "https://jobs.torontohydro.com/go/All-Jobs/2369717/" },
+        { "company": "Toronto Public Library", "url": "https://tpl.ca/about-the-library/jobs/" },
+        { "company": "LCBO (Digital & Technology)", "url": "https://www.lcbo.com/content/lcbo/en/corporate-pages/careers/job-paths.html" },
+        { "company": "City of Brampton", "url": "https://www.brampton.ca/EN/City-Hall/Employment" },
+        { "company": "City of Vaughan", "url": "https://www.vaughan.ca/about-city-vaughan/employment-opportunities" },
+        { "company": "City of Markham", "url": "https://www.markham.ca/about-the-city-of-markham/employment" },
+        { "company": "Region of Durham", "url": "https://www.durham.ca/regional-government/careers-and-volunteering/job-postings/" },
+        { "company": "Halton Region", "url": "https://careers.halton.ca/go/All-Opportunities/2649617/" },
+        { "company": "TDSB (Administrative & Technical)", "url": "https://www.tdsb.on.ca/About-Us/Careers/Support-Staff/Permanent-and-Other-Opportunities/Administrative-and-Technical" }
       ]
     },
     {
@@ -31,7 +41,12 @@
         { "company": "Lyft Careers (Toronto)", "url": "https://www.lyft.com/careers#openings?location=toronto%252C%2520canada" },
         { "company": "Rogers Digital & Technology Jobs", "url": "https://jobs.rogers.com/go/Digital-&-Technology/9547900/" },
         { "company": "Bell Careers (Toronto)", "url": "https://jobs.bell.ca/ca/en/search-results?keywords=toronto" },
-        { "company": "TELUS Careers (Toronto)", "url": "https://careers.telus.com/search/?createNewAlert=false&q=&locationsearch=toronto&optionsFacetsDD_department=&optionsFacetsDD_customfield5=&optionsFacetsDD_customfield1=&optionsFacetsDD_customfield2=" }
+        { "company": "TELUS Careers (Toronto)", "url": "https://careers.telus.com/search/?createNewAlert=false&q=&locationsearch=toronto&optionsFacetsDD_department=&optionsFacetsDD_customfield5=&optionsFacetsDD_customfield1=&optionsFacetsDD_customfield2=" },
+        { "company": "Shopify", "url": "https://www.shopify.com/careers/jobs" },
+        { "company": "Thomson Reuters", "url": "https://careers.thomsonreuters.com/us/en/home" },
+        { "company": "Amazon (Toronto)", "url": "https://www.amazon.jobs/en/locations/Toronto-Canada" },
+        { "company": "Uber (Toronto)", "url": "https://www.uber.com/ca/en/careers/list/?location=CAN-Ontario-Toronto" },
+        { "company": "OpenText (Development)", "url": "https://careers.opentext.com/us/en/c/engineering-jobs" }
       ]
     },
     {
@@ -47,7 +62,16 @@
         { "company": "Manulife", "url": "https://careers.manulife.com/global/en/search-results?keywords=html&p=ChIJpTvG15DL1IkRd8S0KlBVNTI&location=Toronto%2C%20ON%2C%20Canada" },
         { "company": "Equifax", "url": "https://careers.equifax.com/en/locations/toronto/" },
         { "company": "OTPP", "url": "https://otppb.wd3.myworkdayjobs.com/en-US/OntarioTeachers_Careers?q=web" },
-        { "company": "HOOPP", "url": "https://hoopp.wd10.myworkdayjobs.com/HOOPP?q=html" }
+        { "company": "HOOPP", "url": "https://hoopp.wd10.myworkdayjobs.com/HOOPP?q=html" },
+        { "company": "TD", "url": "https://careers.td.com/" },
+        { "company": "CIBC", "url": "https://cibc.wd3.myworkdayjobs.com/search" },
+        { "company": "Sun Life (Digital)", "url": "https://www.sunlife.ca/en/careers/digital-jobs/" },
+        { "company": "Canada Life (Technology)", "url": "https://jobs.canadalife.com/go/Technology,-Digital-&-Analytics/9170101/" },
+        { "company": "Intact Insurance", "url": "https://careers.intactfc.com/jobs" },
+        { "company": "OMERS (IT)", "url": "https://careers.omers.com/ca/en/c/information-technology-jobs" },
+        { "company": "Wealthsimple", "url": "https://www.wealthsimple.com/jobs" },
+        { "company": "Interac", "url": "https://www.interac.ca/en/company/careers/careers-at-interac/" },
+        { "company": "Questrade (Technology)", "url": "https://www.questrade.com/about-us/careers/technology" }
       ]
     },
     {
@@ -71,11 +95,38 @@
         { "company": "Conagra Brands", "url": "https://careers.conagrabrands.com/us/en/search-results?keywords=&p=65a8e27d8879283831b664bd8b7f0ad4&location=Toronto,%20Ontario,%20Canada" },
         { "company": "Labatt (Ab InBev)", "url": "https://wd1.myworkdaysite.com/recruiting/abinbev/CAN?locations=9a7a7b779da90101b509f150a55f0000&locations=9a7a7b779da90101b509f01adb370000" },
         { "company": "Molson", "url": "https://careers.molsoncoors.com/us/en/search-results?m=3&location=Toronto%252CCanada" },
-        { "company": "Molson (second board)", "url": "https://jobs.molsoncoors.com/search/?q=&q2=&alertId=&title=&location=Toronto&department=&date=#searchresults" }
+        { "company": "Molson (second board)", "url": "https://jobs.molsoncoors.com/search/?q=&q2=&alertId=&title=&location=Toronto&department=&date=#searchresults" },
+        { "company": "Loblaw (incl. Loblaw Digital)", "url": "https://careers.loblaw.ca/corporate/" },
+        { "company": "Canadian Tire (Tech)", "url": "https://canadiantirecorporation.wd3.myworkdayjobs.com/Enterprise_External_Careers_Site?jobFamilyGroup=a4710df742e51025f2508f0b0b410000" },
+        { "company": "Restaurant Brands Intl. (Tim Hortons) IT & Digital", "url": "https://careers.rbi.com/global/en/c/it-digital-jobs" },
+        { "company": "Canada Goose", "url": "https://www.canadagoose.com/en-us/pages/careers" },
+        { "company": "Indigo (Home Office)", "url": "https://careers.smartrecruiters.com/IndigoBooksMusic/home-office" }
       ]
     },
     {
-      "title": "Healthcare, Industrial & Other",
+      "title": "Media & Entertainment",
+      "intro": "",
+      "portals": [
+        { "company": "CBC/Radio-Canada", "url": "https://cbc.radio-canada.ca/en/working-with-us/jobs" },
+        { "company": "Corus Entertainment", "url": "https://www.corusent.com/careers/" },
+        { "company": "The Globe and Mail", "url": "https://www.theglobeandmail.com/about/work-at-the-globe/" },
+        { "company": "Cineplex", "url": "https://careers.cineplex.com/" }
+      ]
+    },
+    {
+      "title": "Hospitals & Healthcare",
+      "intro": "",
+      "portals": [
+        { "company": "University Health Network", "url": "https://www.uhn.ca/corporate/Careers" },
+        { "company": "SickKids", "url": "https://www.sickkids.ca/en/careers-volunteer/careers/" },
+        { "company": "Sunnybrook", "url": "https://sunnybrook.ca/employment/" },
+        { "company": "Unity Health Toronto", "url": "https://unityhealth.to/get-involved/work-at-unity-health/employment-opportunities/" },
+        { "company": "Sinai Health (Corporate & IT)", "url": "https://www.sinaihealth.ca/careers-at-sinai-health/administrative-and-corporate-jobs" },
+        { "company": "Ontario Health", "url": "https://ontariohealth.ca/about/work/careers.html" }
+      ]
+    },
+    {
+      "title": "Transportation, Industrial & Other",
       "intro": "",
       "portals": [
         { "company": "Eli Lilly", "url": "https://careers.lilly.com/us/en/search-results?keywords=web" },
@@ -84,16 +135,20 @@
         { "company": "Aecon", "url": "https://jobs.aecon.com/go/View-All-Aecon-Jobs/2609917/?q=&q2=&alertId=&locationsearch=&title=&department=&location=Toronto&date=#searchresults" },
         { "company": "IPEX", "url": "https://aliaxis.wd3.myworkdayjobs.com/IPEX?locations=eda0eb93169c01bc21fff17f921a5c1a&locations=7ed37b00bf491001ec7e1135c6720000" },
         { "company": "Cadillac Fairview", "url": "https://recruiting.ultipro.ca/cad5000cfcl/JobBoard/89aff150-d66c-444e-b2df-be190dad9e87/?q=&o=distance&w=Toronto%2C+ON%2C+CAN&wc=-79.383907%2C43.653524&we=-79.89990700000001%2C44.169523999999996%7C-78.867907%2C43.137524&wpst=2" },
-        { "company": "CAASCO", "url": "https://jobs.caaclubgroup.ca/search/" }
+        { "company": "CAASCO", "url": "https://jobs.caaclubgroup.ca/search/" },
+        { "company": "Toronto Pearson (GTAA)", "url": "https://careers.torontopearson.com/" },
+        { "company": "Porter Airlines", "url": "https://careers.flyporter.com/" }
       ]
     },
     {
-      "title": "Universities",
+      "title": "Universities & Colleges",
       "intro": "",
       "portals": [
         { "company": "University of Toronto Jobs", "url": "https://jobs.utoronto.ca/search/?q=html&utm_source=CSSearchWidget&startrow=1" },
         { "company": "Toronto Metropolitan University Jobs", "url": "https://careers.torontomu.ca/psc/hrcgprd/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U" },
-        { "company": "York University Jobs", "url": "https://jobs-ca.technomedia.com/yorkuniversity/" }
+        { "company": "York University Jobs", "url": "https://jobs-ca.technomedia.com/yorkuniversity/" },
+        { "company": "Humber Polytechnic", "url": "https://humber.ca/careers/" },
+        { "company": "Sheridan College", "url": "https://www.sheridancollege.ca/careers/why-work-at-sheridan" }
       ]
     }
   ]
