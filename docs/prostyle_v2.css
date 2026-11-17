@@ -24,18 +24,21 @@ body {
 }
 
 /* ------------------------------------------------------------------
-   Disco / Studio 54 backdrop.
-   Fixed behind everything, deliberately faint: spotlight beams from
-   the banner, mirror balls, sparkles and a lit dance floor. The
-   section boxes are opaque, so none of this sits under the links.
+   Boogie / abstract retro backdrop.
+   Fixed behind everything, deliberately faint: a 70s sunburst from
+   the banner, rainbow arcs in two corners, a band of groovy waves
+   and soft polka dots. The section boxes are opaque, so none of
+   this sits under the links.
    ------------------------------------------------------------------ */
 :root {
-    --disco-pink: 255, 64, 200;
-    --disco-violet: 140, 80, 255;
-    --disco-gold: 212, 175, 55;
+    --boogie-orange: 255, 128, 32;
+    --boogie-mustard: 232, 180, 40;
+    --boogie-rust: 196, 72, 32;
+    --boogie-pink: 255, 80, 160;
+    --boogie-teal: 40, 170, 160;
 }
 
-.disco-backdrop {
+.boogie-backdrop {
     position: fixed;
     inset: 0;
     z-index: -1;
@@ -43,21 +46,21 @@ body {
     pointer-events: none;
 }
 
-.disco-backdrop > * {
+.boogie-backdrop > * {
     position: absolute;
 }
 
-/* Coloured haze in the corners */
-.disco-glow {
+/* Warm haze in the corners */
+.boogie-glow {
     inset: 0;
     background:
-        radial-gradient(ellipse 45% 40% at 0% 10%, rgba(var(--disco-pink), 0.10), transparent 70%),
-        radial-gradient(ellipse 45% 40% at 100% 10%, rgba(var(--disco-violet), 0.10), transparent 70%),
-        radial-gradient(ellipse 60% 35% at 50% 100%, rgba(var(--disco-gold), 0.07), transparent 70%);
+        radial-gradient(ellipse 45% 40% at 0% 0%, rgba(var(--boogie-orange), 0.09), transparent 70%),
+        radial-gradient(ellipse 45% 40% at 100% 100%, rgba(var(--boogie-pink), 0.08), transparent 70%),
+        radial-gradient(ellipse 40% 35% at 100% 0%, rgba(var(--boogie-teal), 0.06), transparent 70%);
 }
 
-/* Spotlight beams fanning down from the top centre */
-.disco-beams {
+/* Sunburst rays fanning down from the top centre */
+.boogie-sunburst {
     top: 0;
     bottom: 0;
     left: -30%;
@@ -65,106 +68,84 @@ body {
     transform-origin: 50% 0;
     background: repeating-conic-gradient(
         from 0deg at 50% 0%,
-        rgba(var(--disco-pink), 0.07) 0deg 2.5deg,
-        transparent 2.5deg 11deg,
-        rgba(var(--disco-gold), 0.06) 11deg 13.5deg,
-        transparent 13.5deg 22deg,
-        rgba(var(--disco-violet), 0.07) 22deg 24.5deg,
-        transparent 24.5deg 33deg
+        rgba(var(--boogie-orange), 0.07) 0deg 6deg,
+        transparent 6deg 12deg,
+        rgba(var(--boogie-mustard), 0.06) 12deg 18deg,
+        transparent 18deg 24deg,
+        rgba(var(--boogie-rust), 0.07) 24deg 30deg,
+        transparent 30deg 36deg
     );
-    -webkit-mask-image: radial-gradient(ellipse 60% 90% at 50% 0%, #000 15%, transparent 80%);
-    mask-image: radial-gradient(ellipse 60% 90% at 50% 0%, #000 15%, transparent 80%);
-    animation: disco-sway 22s ease-in-out infinite alternate;
+    -webkit-mask-image: radial-gradient(ellipse 60% 85% at 50% 0%, #000 10%, transparent 80%);
+    mask-image: radial-gradient(ellipse 60% 85% at 50% 0%, #000 10%, transparent 80%);
+    animation: boogie-sway 26s ease-in-out infinite alternate;
 }
 
-/* Lit checkerboard dance floor receding at the bottom */
-.disco-floor {
-    left: -50%;
-    right: -50%;
-    bottom: -10vh;
-    height: 45vh;
-    transform: perspective(500px) rotateX(62deg);
-    transform-origin: 50% 100%;
-    background: repeating-conic-gradient(
-        rgba(var(--disco-pink), 0.55) 0 25%,
-        rgba(var(--disco-gold), 0.45) 0 50%
-    ) 0 0 / 90px 90px;
-    opacity: 0.07;
-    -webkit-mask-image: linear-gradient(to top, #000 20%, transparent 95%);
-    mask-image: linear-gradient(to top, #000 20%, transparent 95%);
-    animation: disco-floor-pulse 6s ease-in-out infinite alternate;
+/* Rainbow arcs: bottom-left and top-right corners */
+.boogie-arcs {
+    width: 520px;
+    height: 520px;
+    opacity: 0.10;
+    background: radial-gradient(
+        circle at var(--arc-origin),
+        transparent 0 150px,
+        rgb(var(--boogie-pink)) 150px 190px,
+        rgb(var(--boogie-orange)) 190px 230px,
+        rgb(var(--boogie-mustard)) 230px 270px,
+        rgb(var(--boogie-teal)) 270px 310px,
+        transparent 310px
+    );
 }
 
-/* Mirror-ball sparkles scattered over the room */
-.disco-sparkles,
-.disco-sparkles::after {
+.boogie-arcs-left {
+    --arc-origin: 0% 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.boogie-arcs-right {
+    --arc-origin: 100% 0%;
+    right: 0;
+    top: 0;
+}
+
+/* A band of groovy waves drifting across the middle of the screen */
+.boogie-waves {
+    left: 0;
+    right: 0;
+    top: 58%;
+    height: 160px;
+    opacity: 0.08;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='160' viewBox='0 0 240 160'%3E%3Cg fill='none' stroke-width='14'%3E%3Cpath d='M0 30 Q60 0 120 30 T240 30' stroke='%23ff8020'/%3E%3Cpath d='M0 58 Q60 28 120 58 T240 58' stroke='%23e8b428'/%3E%3Cpath d='M0 86 Q60 56 120 86 T240 86' stroke='%23c44820'/%3E%3Cpath d='M0 114 Q60 84 120 114 T240 114' stroke='%23ff50a0'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 240px 160px repeat-x;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+    animation: boogie-drift 30s linear infinite;
+}
+
+/* Soft retro polka dots */
+.boogie-dots {
     inset: 0;
     background-image:
-        radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 1px, transparent 2px),
-        radial-gradient(circle, rgba(255, 210, 245, 0.8) 0 1px, transparent 2px),
-        radial-gradient(circle, rgba(255, 236, 170, 0.8) 0 1.5px, transparent 2.5px);
-    background-size: 137px 151px, 211px 197px, 263px 239px;
-    background-position: 0 0, 61px 89px, 113px 37px;
-    opacity: 0.25;
-    animation: disco-twinkle 3.5s ease-in-out infinite alternate;
+        radial-gradient(circle, rgba(var(--boogie-mustard), 0.5) 0 9px, transparent 10px),
+        radial-gradient(circle, rgba(var(--boogie-pink), 0.45) 0 6px, transparent 7px),
+        radial-gradient(circle, transparent 0 12px, rgba(var(--boogie-teal), 0.5) 13px 16px, transparent 17px);
+    background-size: 230px 210px, 170px 190px, 290px 260px;
+    background-position: 40px 60px, 120px 10px, 190px 140px;
+    opacity: 0.07;
 }
 
-.disco-sparkles::after {
-    content: "";
-    position: absolute;
-    background-position: 71px 23px, 7px 131px, 177px 151px;
-    animation-delay: -1.75s;
+@keyframes boogie-sway {
+    from { transform: rotate(-6deg); }
+    to   { transform: rotate(6deg); }
 }
 
-/* Two mirror balls hanging in the top corners */
-.disco-ball {
-    top: 70px;
-    width: 180px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background:
-        radial-gradient(circle at 34% 28%, rgba(255, 255, 255, 0.95) 0 3%, rgba(255, 255, 255, 0.25) 10%, transparent 26%),
-        radial-gradient(circle at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.75) 100%),
-        repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0 1px, transparent 1px 13px),
-        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0 1px, transparent 1px 13px),
-        conic-gradient(from 30deg, #ffd6f5, #b8b8c8, #fff1c0, #8f95b0, #e6d6ff, #c4c4d2, #ffd6f5);
-    box-shadow: 0 0 70px rgba(var(--disco-pink), 0.45), 0 0 120px rgba(var(--disco-violet), 0.3);
-    opacity: 0.16;
-}
-
-.disco-ball::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 100%;
-    width: 2px;
-    height: 80px;
-    background: linear-gradient(to bottom, transparent, #bdb59a);
-}
-
-.disco-ball-left  { left: -50px; }
-.disco-ball-right { right: -50px; }
-
-@keyframes disco-sway {
-    from { transform: rotate(-5deg); }
-    to   { transform: rotate(5deg); }
-}
-
-@keyframes disco-twinkle {
-    from { opacity: 0.08; }
-    to   { opacity: 0.32; }
-}
-
-@keyframes disco-floor-pulse {
-    from { opacity: 0.05; }
-    to   { opacity: 0.09; }
+@keyframes boogie-drift {
+    from { background-position: 0 0; }
+    to   { background-position: 240px 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .disco-beams,
-    .disco-floor,
-    .disco-sparkles,
-    .disco-sparkles::after {
+    .boogie-sunburst,
+    .boogie-waves {
         animation: none;
     }
 }

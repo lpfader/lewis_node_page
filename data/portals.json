@@ -27,12 +27,13 @@
         { "company": "IESO", "url": "https://careers.ieso.ca/" },
         { "company": "WSIB", "url": "https://www.wsib.ca/en/careers" },
         { "company": "MPAC (Pickering)", "url": "https://www.mpac.ca/en/AboutUs/CareersMPAC" },
-        { "company": "Town of Oakville", "url": "https://www.oakville.ca/town-hall/careers/" }
+        { "company": "Town of Oakville", "url": "https://www.oakville.ca/town-hall/careers/" },
+        { "company": "Ontario Power Generation (OPG)", "url": "https://www.opg.com/careers/" }
       ]
     },
     {
       "title": "Tech & Telecom",
-      "intro": "The sections below are tailored to my own discriminating standards, but they will hold value for anyone who wants a more web-design focused approach.",
+      "intro": "",
       "portals": [
         { "company": "Microsoft Careers (Toronto)", "url": "https://apply.careers.microsoft.com/careers?start=0&location=Canada%2C+Ontario%2C+Toronto&pid=1970393556757950&sort_by=distance&filter_distance=160&filter_include_remote=1" },
         { "company": "Apple Careers", "url": "https://jobs.apple.com" },
@@ -74,7 +75,8 @@
         { "company": "Achievers", "url": "https://www.achievers.com/company/careers/" },
         { "company": "Ritual", "url": "https://ritual.co/careers" },
         { "company": "Softchoice", "url": "https://www.softchoice.com/careers" },
-        { "company": "Celestica", "url": "https://www.celestica.com/careers/working-at-celestica" }
+        { "company": "Celestica", "url": "https://www.celestica.com/careers/working-at-celestica" },
+        { "company": "League", "url": "https://league.com/careers/" }
       ]
     },
     {
@@ -106,7 +108,10 @@
         { "company": "Brookfield", "url": "https://www.brookfield.com/careers" },
         { "company": "KOHO", "url": "https://www.koho.ca/careers/" },
         { "company": "PolicyMe", "url": "https://www.policyme.com/careers" },
-        { "company": "Borrowell", "url": "https://borrowell.com/careers" }
+        { "company": "Borrowell", "url": "https://borrowell.com/careers" },
+        { "company": "National Bank", "url": "https://jobs.nbc.ca/" },
+        { "company": "Aviva Canada (Markham)", "url": "https://www.aviva.ca/en/careers/" },
+        { "company": "Mackenzie Investments", "url": "https://www.mackenzieinvestments.com/en/about-us/careers" }
       ]
     },
     {
@@ -125,7 +130,8 @@
         { "company": "Konrad Group", "url": "https://www.konrad.com/careers" },
         { "company": "Rangle.io", "url": "https://rangle.io/careers" },
         { "company": "CGI", "url": "https://www.cgi.com/en/careers" },
-        { "company": "Thoughtworks Canada", "url": "https://www.thoughtworks.com/en-ca/careers" }
+        { "company": "Thoughtworks Canada", "url": "https://www.thoughtworks.com/en-ca/careers" },
+        { "company": "Critical Mass (Toronto)", "url": "https://www.criticalmass.com/careers" }
       ]
     },
     {
@@ -150,7 +156,11 @@
         { "company": "PepsiCo Canada", "url": "https://www.pepsicojobs.com/canada" },
         { "company": "Kraft Heinz", "url": "https://careers.kraftheinzcompany.com/" },
         { "company": "Unilever", "url": "https://careers.unilever.com/en" },
-        { "company": "Procter & Gamble", "url": "https://www.pgcareers.com/" }
+        { "company": "Procter & Gamble", "url": "https://www.pgcareers.com/" },
+        { "company": "Lululemon (Toronto)", "url": "https://careers.lululemon.com/en_US/careers" },
+        { "company": "Sobeys", "url": "https://www.sobeyscareers.com/" },
+        { "company": "Best Buy Canada", "url": "https://www.bestbuy.ca/en-ca/about/careers" },
+        { "company": "Pet Valu (Markham)", "url": "https://careers.petvalu.com/" }
       ]
     },
     {
@@ -182,7 +192,9 @@
         { "company": "Women's College Hospital", "url": "https://www.womenscollegehospital.ca/careers/" },
         { "company": "Scarborough Health Network", "url": "https://www.shn.ca/careers-volunteering/careers/" },
         { "company": "Mackenzie Health", "url": "https://www.mackenziehealth.ca/careers" },
-        { "company": "Humber River Health", "url": "https://www.hrh.ca/careers/" }
+        { "company": "Humber River Health", "url": "https://www.hrh.ca/careers/" },
+        { "company": "Michael Garron Hospital", "url": "https://www.tehn.ca/careers-volunteering/careers" },
+        { "company": "William Osler Health System", "url": "https://www.williamoslerhs.ca/careers" }
       ]
     },
     {
@@ -202,7 +214,8 @@
         { "company": "General Motors Canada", "url": "https://search-careers.gm.com/en/" },
         { "company": "Purolator", "url": "https://careers.purolator.com/" },
         { "company": "Bombardier", "url": "https://jobs.bombardier.com/" },
-        { "company": "Enbridge", "url": "https://www.enbridge.com/careers" }
+        { "company": "Enbridge", "url": "https://www.enbridge.com/careers" },
+        { "company": "Ford Canada (Oakville)", "url": "https://www.ford.ca/careers/" }
       ]
     },
     {
@@ -216,7 +229,8 @@
         { "company": "Sheridan College", "url": "https://www.sheridancollege.ca/careers/why-work-at-sheridan" },
         { "company": "OCAD University", "url": "https://www.ocadu.ca/employment/job-opportunities" },
         { "company": "Centennial College", "url": "https://www.centennialcollege.ca/about-centennial/careers" },
-        { "company": "Durham College", "url": "https://durhamcollege.ca/about/employment-opportunities" }
+        { "company": "Durham College", "url": "https://durhamcollege.ca/about/employment-opportunities" },
+        { "company": "George Brown College", "url": "https://www.georgebrown.ca/about/careers-george-brown" }
       ]
     }
   ]

@@ -29,7 +29,7 @@ const PAGE = {
   bannerImage: "banner.jpg",
   intro: [
     "Hi Everyone! This page is your place for portals to all of the top GTA employers.",
-    "This began as a python project and I realized that others may want to use it as well. After a while I wanted to shift towards full stack development and determined that the concept behind my python script would be better served by a Node.js implementation. Most of the links will focus on web development, however you can use this as a launch pad for your project or job search",
+    "This began as a python project and I realized that others may want to use it as well. After a while I wanted to shift towards full stack development and determined that the concept behind my python script would be better served by a Node.js implementation. Most of the links will focus on web development, however you can use this as a launch pad for your project or job search.",
   ],
   // Not directory listings, so they stay with the prose rather than the JSON.
   proseLinks: [
@@ -195,13 +195,13 @@ function render(sections) {
   <link rel="stylesheet" href="prostyle_v2.css" />
 </head>
 <body>
-  <div class="disco-backdrop" aria-hidden="true">
-    <div class="disco-glow"></div>
-    <div class="disco-beams"></div>
-    <div class="disco-floor"></div>
-    <div class="disco-sparkles"></div>
-    <div class="disco-ball disco-ball-left"></div>
-    <div class="disco-ball disco-ball-right"></div>
+  <div class="boogie-backdrop" aria-hidden="true">
+    <div class="boogie-glow"></div>
+    <div class="boogie-sunburst"></div>
+    <div class="boogie-dots"></div>
+    <div class="boogie-waves"></div>
+    <div class="boogie-arcs boogie-arcs-left"></div>
+    <div class="boogie-arcs boogie-arcs-right"></div>
   </div>
   <header class="page-header">
     <div class="banner-wrapper">
