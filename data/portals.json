@@ -22,7 +22,12 @@
         { "company": "City of Markham", "url": "https://www.markham.ca/about-the-city-of-markham/employment" },
         { "company": "Region of Durham", "url": "https://www.durham.ca/regional-government/careers-and-volunteering/job-postings/" },
         { "company": "Halton Region", "url": "https://careers.halton.ca/go/All-Opportunities/2649617/" },
-        { "company": "TDSB (Administrative & Technical)", "url": "https://www.tdsb.on.ca/About-Us/Careers/Support-Staff/Permanent-and-Other-Opportunities/Administrative-and-Technical" }
+        { "company": "TDSB (Administrative & Technical)", "url": "https://www.tdsb.on.ca/About-Us/Careers/Support-Staff/Permanent-and-Other-Opportunities/Administrative-and-Technical" },
+        { "company": "Hydro One", "url": "https://www.hydroone.com/careers" },
+        { "company": "IESO", "url": "https://careers.ieso.ca/" },
+        { "company": "WSIB", "url": "https://www.wsib.ca/en/careers" },
+        { "company": "MPAC (Pickering)", "url": "https://www.mpac.ca/en/AboutUs/CareersMPAC" },
+        { "company": "Town of Oakville", "url": "https://www.oakville.ca/town-hall/careers/" }
       ]
     },
     {
@@ -57,7 +62,19 @@
         { "company": "Thomson Reuters", "url": "https://careers.thomsonreuters.com/us/en/home" },
         { "company": "Amazon (Toronto)", "url": "https://www.amazon.jobs/en/locations/Toronto-Canada" },
         { "company": "Uber (Toronto)", "url": "https://www.uber.com/ca/en/careers/list/?location=CAN-Ontario-Toronto" },
-        { "company": "OpenText (Development)", "url": "https://careers.opentext.com/us/en/c/engineering-jobs" }
+        { "company": "OpenText (Development)", "url": "https://careers.opentext.com/us/en/c/engineering-jobs" },
+        { "company": "Salesforce (Toronto)", "url": "https://www.salesforce.com/company/careers/" },
+        { "company": "Pinterest (Toronto)", "url": "https://www.pinterestcareers.com/jobs/?location=Toronto" },
+        { "company": "Dayforce (Toronto)", "url": "https://jobs.dayforcehcm.com/en-US/mydayforce/CANDIDATEPORTAL" },
+        { "company": "Geotab (Oakville)", "url": "https://careers.geotab.com/" },
+        { "company": "ecobee (Toronto)", "url": "https://careers.generac.com/en/brands/ecobee/" },
+        { "company": "Faire (Toronto)", "url": "https://www.faire.com/careers" },
+        { "company": "Top Hat", "url": "https://tophat.com/company/work-with-us/" },
+        { "company": "Nulogy", "url": "https://nulogy.com/company/careers/" },
+        { "company": "Achievers", "url": "https://www.achievers.com/company/careers/" },
+        { "company": "Ritual", "url": "https://ritual.co/careers" },
+        { "company": "Softchoice", "url": "https://www.softchoice.com/careers" },
+        { "company": "Celestica", "url": "https://www.celestica.com/careers/working-at-celestica" }
       ]
     },
     {
@@ -82,7 +99,14 @@
         { "company": "OMERS (IT)", "url": "https://careers.omers.com/ca/en/c/information-technology-jobs" },
         { "company": "Wealthsimple", "url": "https://www.wealthsimple.com/jobs" },
         { "company": "Interac", "url": "https://www.interac.ca/en/company/careers/careers-at-interac/" },
-        { "company": "Questrade (Technology)", "url": "https://www.questrade.com/about-us/careers/technology" }
+        { "company": "Questrade (Technology)", "url": "https://www.questrade.com/about-us/careers/technology" },
+        { "company": "TMX Group", "url": "https://www.tmx.com/en/careers" },
+        { "company": "Moneris", "url": "https://www.moneris.com/careers" },
+        { "company": "CPP Investments", "url": "https://www.cppinvestments.com/careers/" },
+        { "company": "Brookfield", "url": "https://www.brookfield.com/careers" },
+        { "company": "KOHO", "url": "https://www.koho.ca/careers/" },
+        { "company": "PolicyMe", "url": "https://www.policyme.com/careers" },
+        { "company": "Borrowell", "url": "https://borrowell.com/careers" }
       ]
     },
     {
@@ -97,7 +121,11 @@
         { "company": "EY Canada Careers", "url": "https://www.ey.com/en_ca/careers" },
         { "company": "PwC Canada Careers", "url": "https://jobs-ca.pwc.com/ca/en" },
         { "company": "KPMG Canada Careers", "url": "https://kpmg.com/ca/en/home/careers.html" },
-        { "company": "Slalom (Toronto)", "url": "https://www.slalom.com/us/en/who-we-are/locations/toronto" }
+        { "company": "Slalom (Toronto)", "url": "https://www.slalom.com/us/en/who-we-are/locations/toronto" },
+        { "company": "Konrad Group", "url": "https://www.konrad.com/careers" },
+        { "company": "Rangle.io", "url": "https://rangle.io/careers" },
+        { "company": "CGI", "url": "https://www.cgi.com/en/careers" },
+        { "company": "Thoughtworks Canada", "url": "https://www.thoughtworks.com/en-ca/careers" }
       ]
     },
     {
@@ -118,7 +146,11 @@
         { "company": "Canadian Tire (Tech)", "url": "https://canadiantirecorporation.wd3.myworkdayjobs.com/Enterprise_External_Careers_Site?jobFamilyGroup=a4710df742e51025f2508f0b0b410000" },
         { "company": "Restaurant Brands Intl. (Tim Hortons) IT & Digital", "url": "https://careers.rbi.com/global/en/c/it-digital-jobs" },
         { "company": "Canada Goose", "url": "https://www.canadagoose.com/en-us/pages/careers" },
-        { "company": "Indigo (Home Office)", "url": "https://careers.smartrecruiters.com/IndigoBooksMusic/home-office" }
+        { "company": "Indigo (Home Office)", "url": "https://careers.smartrecruiters.com/IndigoBooksMusic/home-office" },
+        { "company": "PepsiCo Canada", "url": "https://www.pepsicojobs.com/canada" },
+        { "company": "Kraft Heinz", "url": "https://careers.kraftheinzcompany.com/" },
+        { "company": "Unilever", "url": "https://careers.unilever.com/en" },
+        { "company": "Procter & Gamble", "url": "https://www.pgcareers.com/" }
       ]
     },
     {
@@ -128,7 +160,11 @@
         { "company": "CBC/Radio-Canada", "url": "https://cbc.radio-canada.ca/en/working-with-us/jobs" },
         { "company": "Corus Entertainment", "url": "https://www.corusent.com/careers/" },
         { "company": "The Globe and Mail", "url": "https://www.theglobeandmail.com/about/work-at-the-globe/" },
-        { "company": "Cineplex", "url": "https://careers.cineplex.com/" }
+        { "company": "Cineplex", "url": "https://careers.cineplex.com/" },
+        { "company": "MLSE", "url": "https://www.mlse.com/our-company/join-our-team" },
+        { "company": "TVO", "url": "https://www.tvo.org/careers" },
+        { "company": "Postmedia", "url": "https://www.postmedia.com/careers/" },
+        { "company": "Ubisoft Toronto", "url": "https://www.ubisoft.com/en-us/company/careers/locations/toronto" }
       ]
     },
     {
@@ -140,7 +176,13 @@
         { "company": "Sunnybrook", "url": "https://sunnybrook.ca/employment/" },
         { "company": "Unity Health Toronto", "url": "https://unityhealth.to/get-involved/work-at-unity-health/employment-opportunities/" },
         { "company": "Sinai Health (Corporate & IT)", "url": "https://www.sinaihealth.ca/careers-at-sinai-health/administrative-and-corporate-jobs" },
-        { "company": "Ontario Health", "url": "https://ontariohealth.ca/about/work/careers.html" }
+        { "company": "Ontario Health", "url": "https://ontariohealth.ca/about/work/careers.html" },
+        { "company": "Trillium Health Partners", "url": "https://www.thp.ca/careers/Pages/Apply.aspx" },
+        { "company": "North York General", "url": "https://www.nygh.on.ca/careers-and-volunteers/career-opportunities/" },
+        { "company": "Women's College Hospital", "url": "https://www.womenscollegehospital.ca/careers/" },
+        { "company": "Scarborough Health Network", "url": "https://www.shn.ca/careers-volunteering/careers/" },
+        { "company": "Mackenzie Health", "url": "https://www.mackenziehealth.ca/careers" },
+        { "company": "Humber River Health", "url": "https://www.hrh.ca/careers/" }
       ]
     },
     {
@@ -155,7 +197,12 @@
         { "company": "Cadillac Fairview", "url": "https://recruiting.ultipro.ca/cad5000cfcl/JobBoard/89aff150-d66c-444e-b2df-be190dad9e87/?q=&o=distance&w=Toronto%2C+ON%2C+CAN&wc=-79.383907%2C43.653524&we=-79.89990700000001%2C44.169523999999996%7C-78.867907%2C43.137524&wpst=2" },
         { "company": "CAASCO", "url": "https://jobs.caaclubgroup.ca/search/" },
         { "company": "Toronto Pearson (GTAA)", "url": "https://careers.torontopearson.com/" },
-        { "company": "Porter Airlines", "url": "https://careers.flyporter.com/" }
+        { "company": "Porter Airlines", "url": "https://careers.flyporter.com/" },
+        { "company": "Magna International (Aurora)", "url": "https://www.magna.com/careers" },
+        { "company": "General Motors Canada", "url": "https://search-careers.gm.com/en/" },
+        { "company": "Purolator", "url": "https://careers.purolator.com/" },
+        { "company": "Bombardier", "url": "https://jobs.bombardier.com/" },
+        { "company": "Enbridge", "url": "https://www.enbridge.com/careers" }
       ]
     },
     {
@@ -166,7 +213,10 @@
         { "company": "Toronto Metropolitan University Jobs", "url": "https://careers.torontomu.ca/psc/hrcgprd/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U" },
         { "company": "York University Jobs", "url": "https://jobs-ca.technomedia.com/yorkuniversity/" },
         { "company": "Humber Polytechnic", "url": "https://humber.ca/careers/" },
-        { "company": "Sheridan College", "url": "https://www.sheridancollege.ca/careers/why-work-at-sheridan" }
+        { "company": "Sheridan College", "url": "https://www.sheridancollege.ca/careers/why-work-at-sheridan" },
+        { "company": "OCAD University", "url": "https://www.ocadu.ca/employment/job-opportunities" },
+        { "company": "Centennial College", "url": "https://www.centennialcollege.ca/about-centennial/careers" },
+        { "company": "Durham College", "url": "https://durhamcollege.ca/about/employment-opportunities" }
       ]
     }
   ]

@@ -151,13 +151,74 @@ a:hover {
     scroll-margin-top: 25px;
 }
 
-.portal-card h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
+/* Column headers: smaller cousins of the banner decal.
+   Dark scanline plate, chrome frame, hazard-stripe corners,
+   gold bars top and bottom, gold lettering with a red extrusion. */
+.portal-card h2.decal {
+    position: relative;
+    margin: 0 0 14px 0;
+    padding: 14px 40px 12px;
+    text-align: center;
+    border: 2px solid #bdb59a;
+    border-radius: 4px;
+    background:
+        repeating-linear-gradient(-45deg, #d8d0b4 0 3px, transparent 3px 7px) left 8px top 5px / 34px 5px no-repeat,
+        repeating-linear-gradient(45deg, #d8d0b4 0 3px, transparent 3px 7px) right 8px top 5px / 34px 5px no-repeat,
+        repeating-linear-gradient(45deg, #d8d0b4 0 3px, transparent 3px 7px) left 8px bottom 5px / 34px 5px no-repeat,
+        repeating-linear-gradient(-45deg, #d8d0b4 0 3px, transparent 3px 7px) right 8px bottom 5px / 34px 5px no-repeat,
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 3px),
+        linear-gradient(180deg, #202020 0%, #0e0e0e 100%);
+    box-shadow:
+        inset 0 0 0 1px #000,
+        inset 0 0 0 3px #3b3626,
+        0 4px 14px rgba(0, 0, 0, 0.7),
+        0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.portal-card h2.decal::before,
+.portal-card h2.decal::after {
+    content: "";
+    position: absolute;
+    left: 28%;
+    right: 28%;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #6e4f10, #f6dc8a 30%, #d4af37 50%, #f6dc8a 70%, #6e4f10);
+    box-shadow: 0 0 6px rgba(212, 175, 55, 0.5);
+}
+
+.portal-card h2.decal::before { top: -3px; }
+.portal-card h2.decal::after  { bottom: -3px; }
+
+.decal-text {
+    display: inline-block;
+    font-family: Impact, Haettenschweiler, "Arial Black", "Arial Narrow Bold", sans-serif;
+    font-weight: normal;
+    font-size: 1.75rem;
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    color: #f3d27a;                 /* fallback where background-clip:text is unsupported */
+    background: linear-gradient(180deg, #fff7d0 0%, #f3d27a 38%, #c18b25 55%, #f6dc8a 78%, #a8741c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #4a0606;
+    filter:
+        drop-shadow(0 1px 0 #9b0d0d)
+        drop-shadow(0 1px 0 #7a0000)
+        drop-shadow(0 1px 0 #520000)
+        drop-shadow(0 3px 4px rgba(0, 0, 0, 0.85));
 }
 
 .portal-card .container {
     flex: 1;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portal-card .container:hover {
+    background-color: #333333;      /* lighter shade on hover */
+    border-color: var(--gold);
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.35);
 }
 
 .portal-card ul {
@@ -190,6 +251,14 @@ a:hover {
 
     .table-of-contents {
         padding: 14px 16px;
+    }
+
+    .portal-card h2.decal {
+        padding: 12px 24px 10px;
+    }
+
+    .decal-text {
+        font-size: 1.4rem;
     }
 
     .table-of-contents ul {

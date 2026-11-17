@@ -166,7 +166,7 @@ function renderSection(section) {
 
   return `
     <section class="portal-card" id="${slug}">
-      <h2>${escapeHtml(section.title)}</h2>
+      <h2 class="decal"><span class="decal-text">${escapeHtml(section.title)}</span></h2>
       <div class="container">${intro}
         <ul>
 ${items}
