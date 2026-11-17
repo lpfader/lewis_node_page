@@ -82,6 +82,7 @@ function fail(message) {
 function validate(sections) {
   const problems = [];
   const seenUrls = new Map();
+  const seenNames = new Map();
 
   sections.forEach((section, si) => {
     const where = `section ${si + 1}`;
@@ -96,7 +97,17 @@ function validate(sections) {
     portals.forEach((portal, pi) => {
       const at = `"${section.title}" item ${pi + 1}`;
 
-      if (!portal.company) problems.push(`${at}: missing "company"`);
+      if (!portal.company) {
+        problems.push(`${at}: missing "company"`);
+      } else {
+        // Same employer under two links reads as a mistake; give each a distinct label.
+        const key = portal.company.trim().toLowerCase();
+        if (seenNames.has(key)) {
+          problems.push(`${at}: duplicate company name "${portal.company}", already listed as ${seenNames.get(key)}`);
+        } else {
+          seenNames.set(key, at);
+        }
+      }
       if (!portal.url) {
         problems.push(`${at}: missing "url"`);
         return;
@@ -126,16 +137,18 @@ function renderPortal(portal) {
 }
 
 function renderSection(section) {
-  const intro = section.intro ? `\n    <p>${escapeHtml(section.intro)}</p>` : "";
+  const intro = section.intro ? `\n      <p class="section-intro">${escapeHtml(section.intro)}</p>` : "";
   const items = section.portals.map(renderPortal).join("\n");
 
   return `
-  <h2>${escapeHtml(section.title)}</h2>
-  <div class="container">${intro}
-    <ul>
+    <section class="portal-card">
+      <h2>${escapeHtml(section.title)}</h2>
+      <div class="container">${intro}
+        <ul>
 ${items}
-    </ul>
-  </div>
+        </ul>
+      </div>
+    </section>
 `;
 }
 
@@ -157,10 +170,14 @@ function render(sections) {
   <link rel="stylesheet" href="prostyle_v2.css" />
 </head>
 <body>
-  <h1>${escapeHtml(PAGE.heading)}</h1>
+  <header class="page-header">
+    <h1>${escapeHtml(PAGE.heading)}</h1>
 ${intro}
 ${prose}
-${sections.map(renderSection).join("")}</body>
+  </header>
+  <main class="grid-container">
+${sections.map(renderSection).join("")}  </main>
+</body>
 </html>
 `;
 }
