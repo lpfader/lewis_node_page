@@ -195,6 +195,14 @@ function render(sections) {
   <link rel="stylesheet" href="prostyle_v2.css" />
 </head>
 <body>
+  <div class="disco-backdrop" aria-hidden="true">
+    <div class="disco-glow"></div>
+    <div class="disco-beams"></div>
+    <div class="disco-floor"></div>
+    <div class="disco-sparkles"></div>
+    <div class="disco-ball disco-ball-left"></div>
+    <div class="disco-ball disco-ball-right"></div>
+  </div>
   <header class="page-header">
     <div class="banner-wrapper">
       <img src="${escapeAttr(PAGE.bannerImage)}" alt="${escapeAttr(PAGE.heading)}" class="header-banner" />
