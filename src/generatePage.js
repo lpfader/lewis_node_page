@@ -26,6 +26,7 @@ const OUT_FILE = path.join(ROOT, "docs", "index.html");
 const PAGE = {
   title: "Lewis\u2019s Job Search Hub",
   heading: "Lewis\u2019s Job Search Hub",
+  bannerImage: "banner.jpg",
   intro: [
     "Hi Everyone! This page is your place for portals to all of the top GTA employers.",
     "This began as a python project and I realized that others may want to use it as well. After a while I wanted to shift towards full stack development and determined that the concept behind my python script would be better served by a Node.js implementation. Most of the links will focus on web development, however you can use this as a launch pad for your project or job search",
@@ -136,12 +137,35 @@ function renderPortal(portal) {
   return `      <li><a href="${url}" target="_blank" rel="noopener noreferrer">${name}</a></li>`;
 }
 
+const slugify = (text) =>
+  String(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
+function renderToc(sections) {
+  const items = sections
+    .map(
+      (section) =>
+        `      <li><a href="#${slugify(section.title)}">${escapeHtml(section.title)}</a></li>`
+    )
+    .join("\n");
+
+  return `    <nav class="table-of-contents" aria-label="Table of Contents">
+      <h2>Table of Contents</h2>
+      <ul>
+${items}
+      </ul>
+    </nav>`;
+}
+
 function renderSection(section) {
+  const slug = slugify(section.title);
   const intro = section.intro ? `\n      <p class="section-intro">${escapeHtml(section.intro)}</p>` : "";
   const items = section.portals.map(renderPortal).join("\n");
 
   return `
-    <section class="portal-card">
+    <section class="portal-card" id="${slug}">
       <h2>${escapeHtml(section.title)}</h2>
       <div class="container">${intro}
         <ul>
@@ -153,13 +177,14 @@ ${items}
 }
 
 function render(sections) {
-  const intro = PAGE.intro.map((p) => `  <p>${escapeHtml(p)}</p>`).join("\n");
+  const intro = PAGE.intro.map((p) => `    <p>${escapeHtml(p)}</p>`).join("\n");
   const prose = PAGE.proseLinks
     .map(
       ({ href, text, after }) =>
-        `  <p><a href="${escapeAttr(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(text)}</a>${escapeHtml(after)}</p>`
+        `    <p><a href="${escapeAttr(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(text)}</a>${escapeHtml(after)}</p>`
     )
     .join("\n");
+  const toc = renderToc(sections);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -171,9 +196,13 @@ function render(sections) {
 </head>
 <body>
   <header class="page-header">
-    <h1>${escapeHtml(PAGE.heading)}</h1>
+    <div class="banner-wrapper">
+      <img src="${escapeAttr(PAGE.bannerImage)}" alt="${escapeAttr(PAGE.heading)}" class="header-banner" />
+      <h1 class="visually-hidden">${escapeHtml(PAGE.heading)}</h1>
+    </div>
 ${intro}
 ${prose}
+${toc}
   </header>
   <main class="grid-container">
 ${sections.map(renderSection).join("")}  </main>

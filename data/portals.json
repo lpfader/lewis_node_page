@@ -43,6 +43,17 @@
         { "company": "Bell Careers (Toronto)", "url": "https://jobs.bell.ca/ca/en/search-results?keywords=toronto" },
         { "company": "TELUS Careers (Toronto)", "url": "https://careers.telus.com/search/?createNewAlert=false&q=&locationsearch=toronto&optionsFacetsDD_department=&optionsFacetsDD_customfield5=&optionsFacetsDD_customfield1=&optionsFacetsDD_customfield2=" },
         { "company": "Shopify", "url": "https://www.shopify.com/careers/jobs" },
+        { "company": "Stripe (Toronto)", "url": "https://stripe.com/jobs/search?locations=Canada--Toronto" },
+        { "company": "Cohere (Toronto)", "url": "https://jobs.ashbyhq.com/cohere" },
+        { "company": "Jobber", "url": "https://careers.jobber.com/" },
+        { "company": "Knak", "url": "https://knak.com/careers/" },
+        { "company": "Pigment", "url": "https://www.pigment.com/careers" },
+        { "company": "1Password", "url": "https://jobs.lever.co/1password" },
+        { "company": "PointClickCare (Mississauga)", "url": "https://pointclickcare.com/careers/" },
+        { "company": "FreshBooks (Toronto)", "url": "https://www.freshbooks.com/careers" },
+        { "company": "Ada (Toronto)", "url": "https://www.ada.cx/careers" },
+        { "company": "BenchSci (Toronto)", "url": "https://www.benchsci.com/careers" },
+        { "company": "Clio", "url": "https://www.clio.com/careers/" },
         { "company": "Thomson Reuters", "url": "https://careers.thomsonreuters.com/us/en/home" },
         { "company": "Amazon (Toronto)", "url": "https://www.amazon.jobs/en/locations/Toronto-Canada" },
         { "company": "Uber (Toronto)", "url": "https://www.uber.com/ca/en/careers/list/?location=CAN-Ontario-Toronto" },
@@ -80,7 +91,13 @@
       "portals": [
         { "company": "Deloitte Canada Careers", "url": "https://careers.deloitte.ca/search/?createNewAlert=false&q=html&locationsearch=&optionsFacetsDD_customfield3=&optionsFacetsDD_shifttype=" },
         { "company": "Accenture Canada Careers", "url": "https://www.accenture.com/ca-en/careers/jobsearch?jk=html&sb=0&vw=0&is_rj=0&pg=1" },
-        { "company": "Publicis Sapient Canada Careers", "url": "https://careers.publicissapient.com/job-search?q=&location_q=Canada" }
+        { "company": "Publicis Sapient Canada Careers", "url": "https://careers.publicissapient.com/job-search?q=&location_q=Canada" },
+        { "company": "BDO Canada", "url": "https://bdo.wd3.myworkdayjobs.com/bdo" },
+        { "company": "Capgemini Canada", "url": "https://www.capgemini.com/ca-en/careers/" },
+        { "company": "EY Canada Careers", "url": "https://www.ey.com/en_ca/careers" },
+        { "company": "PwC Canada Careers", "url": "https://jobs-ca.pwc.com/ca/en" },
+        { "company": "KPMG Canada Careers", "url": "https://kpmg.com/ca/en/home/careers.html" },
+        { "company": "Slalom (Toronto)", "url": "https://www.slalom.com/us/en/who-we-are/locations/toronto" }
       ]
     },
     {
@@ -96,7 +113,8 @@
         { "company": "Labatt (Ab InBev)", "url": "https://wd1.myworkdaysite.com/recruiting/abinbev/CAN?locations=9a7a7b779da90101b509f150a55f0000&locations=9a7a7b779da90101b509f01adb370000" },
         { "company": "Molson", "url": "https://careers.molsoncoors.com/us/en/search-results?m=3&location=Toronto%252CCanada" },
         { "company": "Molson (second board)", "url": "https://jobs.molsoncoors.com/search/?q=&q2=&alertId=&title=&location=Toronto&department=&date=#searchresults" },
-        { "company": "Loblaw (incl. Loblaw Digital)", "url": "https://careers.loblaw.ca/corporate/" },
+        { "company": "Loblaw Companies (Corporate)", "url": "https://careers.loblaw.ca/corporate/" },
+        { "company": "Loblaw Digital", "url": "https://www.loblawdigital.co/careers" },
         { "company": "Canadian Tire (Tech)", "url": "https://canadiantirecorporation.wd3.myworkdayjobs.com/Enterprise_External_Careers_Site?jobFamilyGroup=a4710df742e51025f2508f0b0b410000" },
         { "company": "Restaurant Brands Intl. (Tim Hortons) IT & Digital", "url": "https://careers.rbi.com/global/en/c/it-digital-jobs" },
         { "company": "Canada Goose", "url": "https://www.canadagoose.com/en-us/pages/careers" },
