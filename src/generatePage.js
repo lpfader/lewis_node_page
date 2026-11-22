@@ -27,10 +27,6 @@ const PAGE = {
   title: "Lewis\u2019s Job Search Hub",
   heading: "Lewis\u2019s Job Search Hub",
   bannerImage: "banner.jpg",
-  intro: [
-    "Hi Everyone! This page is your place for portals to all of the top GTA employers.",
-    "This began as a python project and I realized that others may want to use it as well. After a while I wanted to shift towards full stack development and determined that the concept behind my python script would be better served by a Node.js implementation. Most of the links will focus on web development, however you can use this as a launch pad for your project or job search.",
-  ],
   // Not directory listings, so they stay with the prose rather than the JSON.
   proseLinks: [
     {
@@ -177,7 +173,6 @@ ${items}
 }
 
 function render(sections) {
-  const intro = PAGE.intro.map((p) => `    <p>${escapeHtml(p)}</p>`).join("\n");
   const prose = PAGE.proseLinks
     .map(
       ({ href, text, after }) =>
@@ -208,7 +203,6 @@ function render(sections) {
       <img src="${escapeAttr(PAGE.bannerImage)}" alt="${escapeAttr(PAGE.heading)}" class="header-banner" />
       <h1 class="visually-hidden">${escapeHtml(PAGE.heading)}</h1>
     </div>
-${intro}
 ${prose}
 ${toc}
   </header>
